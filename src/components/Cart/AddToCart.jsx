@@ -26,8 +26,22 @@ function AddToCart(props) {
         setImage(response.data.image);
       })
       .catch((error) => console.log(error));
+    
+    function addToCart() {
+      const itemID = props.id
+      if (!itemID) {
+        console.error("Item ID is null or undefined.");
+        return;
+      }
+      axios.post("http://localhost:8081/item/addItem/1", { id: itemID })
+      .then(response => {
+        console.log(response);
+        props.getItems();
+        alert("Item added to cart, please adjust quantity in the basket")
+      }).catch(err => console.error(err))
+  }}
     // e.preventDefault()
-  }
+  
 
     // const itemComponents = []
 
@@ -53,7 +67,7 @@ function AddToCart(props) {
     // <form onSubmit={getItems}>
 
       <div className="mt-2">
-        <button class="btn btn-success" onClick={getItems}>Add to Basket</button>
+        <button class="btn btn-success" onClick={AddToCart}>Add to Basket</button>
 
       </div>
     // </form>
