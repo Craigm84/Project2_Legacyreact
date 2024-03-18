@@ -1,0 +1,49 @@
+.card.body {
+    height: 10rem;
+}
+
+
+.card_imgage > img {
+    max-height: 200px;
+    width: 200px;
+    justify-content: center;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card_text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-4 {
+    padding: 15px;
+    min-height: fit-content;
+}
+
+.card_price_quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.bi-dash-lg {
+color: red;
+}
+
+.bi-plus-lg {
+    color: green;
+}
+
