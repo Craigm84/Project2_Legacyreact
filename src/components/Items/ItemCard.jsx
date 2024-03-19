@@ -24,13 +24,6 @@ function ItemCard(props) {
     const [{ basket }, dispatch] = useStateValue();
     console.log("basket:", basket)
 
-    // const incrementQuantity = () => {
-    //     setQuantity(quantity + 1);
-    // }
-
-    // const decrementQuantity = () => {
-    //     setQuantity(quantity - 1);
-    // }
 
 function addToBasket () {
 
@@ -38,7 +31,7 @@ function addToBasket () {
 
     function getCard() {
 
-        axios.get("http://localhost:8081/item/get")
+        axios.get("http://localhost:8084/item/get")
             .then(response => {
                 setItems(response.data)
                 setName(response.data.name);
@@ -59,7 +52,7 @@ function addToBasket () {
     for (const item of items)
 
         displayItems.push(
-            <div className='col-4' key={item.id} >
+            <div className='col-auto' key={item.id} >
                 <div className='card'>
                     <div className='card_body'>
 

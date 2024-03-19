@@ -40,37 +40,20 @@ function AddToCart(props) {
         alert("Item added to cart, please adjust quantity in the basket")
       }).catch(err => console.error(err))
   }}
-    // e.preventDefault()
-  
+   
 
-    // const itemComponents = []
-
-    // for (const item of items) {
-    //   console.log("Items:", item);
-    //   itemComponents.push()
-    //   axios.post("http://localhost:8081/cart/create/",
-    //     { name, price, quantity, image })
-    //     .then((response) => {
-    //       console.log(response);
-    //       setName(response.data.name);
-    //       setPrice(response.data.price);
-    //       setQuantity(response.data.quantity);
-    //       setImage(response.data.image);
-    //     }).catch(err => console.error(err))
-    // }
-
-
+ 
 
 
   return (
 
-    // <form onSubmit={getItems}>
+    
 
       <div className="mt-2">
         <button class="btn btn-success" onClick={AddToCart}>Add to Basket</button>
 
       </div>
-    // </form>
+   
   )
 }
 

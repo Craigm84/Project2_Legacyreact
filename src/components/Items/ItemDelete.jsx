@@ -10,7 +10,7 @@ function ItemDelete(props) {
 
 useEffect(function getItems() {
 
-    axios.get("http://localhost:8081/item/get")
+    axios.get("http://localhost:8084/item/get")
     .then((response) =>  {
         console.log("Response:", response);
         setId(response.data.id);
@@ -23,7 +23,7 @@ useEffect(function getItems() {
     const itemList = []
 
 
-            axios.delete("http://localhost:8081/item/delete/" + props.id)
+            axios.delete("http://localhost:8084/item/delete/" + props.id)
                 .then(response => { console.log(response);
                 }).catch(error => console.error(error))
 

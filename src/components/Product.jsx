@@ -42,7 +42,7 @@ function Product({ id, name, price, image, quantity }) {
                     </div>
                 </div>
             </div>
-            <button onClick={addToBasket}>Add to basket</button>
+            <button class="btn btn-success" onClick={addToBasket}>Add to basket</button>
         </div>                
 
             )

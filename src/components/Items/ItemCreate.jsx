@@ -11,7 +11,7 @@ function ItemCreate(props) {
 
     function createItem() {
 
-                axios.post("http://localhost:8081/item/create",
+                axios.post("http://localhost:8084/item/create",
                 { name, price, quantity, image })
                 .then(response => {console.log(response);
                 setName("");

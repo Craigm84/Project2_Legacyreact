@@ -15,7 +15,7 @@ function ItemGet(props) {
 
     function getItems() {
 
-        axios.get("http://localhost:8081/item/get")
+        axios.get("http://localhost:8084/item/get")
             .then((response) => setItems(response.data))
             .catch((error) => console.log(error))
     }
@@ -64,11 +64,11 @@ function ItemGet(props) {
                                     <td>{item.quantity}</td>
                                     <td> <Link className="btn btn-primary" type="submit" to={`/Item/update/${item.id}`}>Update</Link> </td>
                                     <td><button type="button" className="btn btn-danger" onClick={() => {
-                axios.delete("http://localhost:8081/item/delete/" + item.id)
+                axios.delete("http://localhost:8084/item/delete/" + item.id)
                     .then(res => { getItems()
 
 
-                        // axios.get("http://localhost:8081/item/get/")
+                        // axios.get("http://localhost:8084/item/get/")
                         //     .then(response => {
                         //         setItems(response.data)
                         //         console.log(response);

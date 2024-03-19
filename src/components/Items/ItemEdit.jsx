@@ -17,7 +17,7 @@ function ItemEdit(props) {
 
     useEffect(function getItems() {
 
-        axios.get("http://localhost:8081/item/get/" + params.id)
+        axios.get("http://localhost:8084/item/get/" + params.id)
             .then((response) => {
                 console.log(response.data);
                 setName(response.data.name);
@@ -30,7 +30,7 @@ function ItemEdit(props) {
 
     function editItem() {
 
-        axios.patch("http://localhost:8081/item/update/" + params.id,
+        axios.patch("http://localhost:8084/item/update/" + params.id,
         { name, price, quantity, image })
         .then(() => {
         navigate(-1);
