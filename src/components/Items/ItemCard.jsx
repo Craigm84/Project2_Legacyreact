@@ -3,12 +3,11 @@ import axios from "axios";
 import { useStateValue } from "../../StateProvider";
 import { useState, useEffect } from "react";
 import './ItemCard.css';
-import ItemManager from './ItemManager';
+import Euros from './Euro';
 import { useNavigate, useParams } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import addToCart from '../Cart/AddToCart';
-import AddToCart from '../Cart/AddToCart';
 
+import AddToCart from '../Cart/AddToCart';
 
 function ItemCard(props) {
     const [id, setId] = useState("")
@@ -20,6 +19,7 @@ function ItemCard(props) {
     const navigate = useNavigate();
     const params = useParams();
     const [quantity, setQuantity] = useState(0);
+   
 
     const [{ basket }, dispatch] = useStateValue();
     console.log("basket:", basket)
@@ -45,8 +45,7 @@ function addToBasket () {
     }
     useEffect(getCard, []);
 
-
-
+ 
     const displayItems = [];
 
     for (const item of items)
@@ -71,6 +70,8 @@ function addToBasket () {
 
                                         <small>£</small>
                                         <strong>{item.price}</strong>
+                                       <Euros />
+                                        
                                     </div>
 <AddToCart id={item.id}/>
                                 </div>
