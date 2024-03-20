@@ -9,6 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import USD from './UsDollar';
 
 import AddToCart from '../Cart/AddToCart';
+import { Dropdown } from 'bootstrap';
 
 function ItemCard(props) {
     const [id, setId] = useState("")
@@ -20,15 +21,15 @@ function ItemCard(props) {
     const navigate = useNavigate();
     const params = useParams();
     const [quantity, setQuantity] = useState(0);
-   
+
 
     const [{ basket }, dispatch] = useStateValue();
     console.log("basket:", basket)
 
 
-function addToBasket () {
+    function addToBasket() {
 
-}
+    }
 
     function getCard() {
 
@@ -46,7 +47,7 @@ function addToBasket () {
     }
     useEffect(getCard, []);
 
- 
+
     const displayItems = [];
 
     for (const item of items)
@@ -64,17 +65,22 @@ function addToBasket () {
 
                             <div className="card_price_quantity">
                                 <div className="card_price">
-                                    <div className="buttons">
-                                        <i onClick={() => setQuantity(quantity - 1)}  className="decrement" class="bi bi-dash-lg"></i>
+                                    <div style={{alignContent:"center"}} className="buttons">
+                                        <i onClick={() => setQuantity(quantity - 1)} className="decrement" class="bi bi-dash-lg"></i>
                                         <div id="quantityChange" className="quantity">{item.quantity}</div>
                                         <i onClick={() => setQuantity(quantity + 1)} className="increment" class="bi bi-plus-lg"></i>
-
-                                        <small>£</small>
-                                        <strong>{item.price}</strong>
-                                       <Euros item={item}/>
-                                       <USD item={item}/>
                                     </div>
-<AddToCart id={item.id}/>
+                                    <div>
+                                        <p>
+                                            <select>
+                                                <option selectedValue={"Choose Currency"}>Choose Currency</option>
+                                                <option>GBP: £{item.price}</option>
+                                                <option>Euro: <Euros item={item} /></option>
+                                                <option>US Dollar: <USD item={item} /></option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <AddToCart id={item.id} />
                                 </div>
                             </div>
 
@@ -98,18 +104,18 @@ function addToBasket () {
 
     return (
 
-            <>
-                <br />
-                <div className='container'>
-                    <div className='row'>
+        <>
+            <br />
+            <div className='container'>
+                <div className='row'>
 
-                        {displayItems}
-                    </div>
+                    {displayItems}
                 </div>
-            </>
-    
+            </div>
+        </>
 
-            );
+
+    );
 }
 
-            export default ItemCard
+export default ItemCard
