@@ -1,11 +1,13 @@
-function Euros({ price }) {
-    const euro = price * 1.3;
+import React from 'react';
 
-
-    return (
-        <div>
-            <p type="text">${euro.toFixed(2)}</p>
-        </div>
-    );
+function Euros({ item }) {
+        const euro = item.price * 1.1;
+    
+    
+        return (
+            <div>
+                <p type="number">€{euro.toFixed(2)}</p>
+            </div>
+        );
 }
 export default Euros;

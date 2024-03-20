@@ -6,6 +6,7 @@ import './ItemCard.css';
 import Euros from './Euro';
 import { useNavigate, useParams } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import USD from './UsDollar';
 
 import AddToCart from '../Cart/AddToCart';
 
@@ -70,8 +71,8 @@ function addToBasket () {
 
                                         <small>£</small>
                                         <strong>{item.price}</strong>
-                                       <Euros />
-                                        
+                                       <Euros item={item}/>
+                                       <USD item={item}/>
                                     </div>
 <AddToCart id={item.id}/>
                                 </div>
