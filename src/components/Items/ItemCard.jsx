@@ -65,7 +65,10 @@ function ItemCard(props) {
 
                             <div className="card_price_quantity">
                                 <div className="card_price">
-                                    <div style={{alignContent:"center"}} className="buttons">
+                                    <div style={{
+                                        position: 'relative',
+                                        left: '30%',
+                                    }} className="buttons">
                                         <i onClick={() => setQuantity(quantity - 1)} className="decrement" class="bi bi-dash-lg"></i>
                                         <div id="quantityChange" className="quantity">{item.quantity}</div>
                                         <i onClick={() => setQuantity(quantity + 1)} className="increment" class="bi bi-plus-lg"></i>
