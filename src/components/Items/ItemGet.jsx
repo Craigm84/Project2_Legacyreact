@@ -4,6 +4,7 @@ import ItemManager from "./ItemManager";
 import ItemDelete from "./ItemDelete";
 import ItemEdit from "./ItemEdit";
 import {Link, Navigate } from "react-router-dom"
+import BasketCreate from "./BasketCreate";
 
 
 function ItemGet(props) {
@@ -41,6 +42,8 @@ function ItemGet(props) {
     return (
         <div>
             <div>
+                <br />
+                <BasketCreate/>
                 <br />
 
                 <table className="table table-bordered">

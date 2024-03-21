@@ -17,7 +17,7 @@ function AddToCart(props) {
 
   function getItems() {
 
-    axios.get("http://localhost:8081/item/get/" + props.id)
+    axios.get("http://localhost:8084/item/get/" + props.id)
       .then((response) => {
         console.log(response.data);
         setName(response.data.name);
@@ -33,7 +33,7 @@ function AddToCart(props) {
         console.error("Item ID is null or undefined.");
         return;
       }
-      axios.post("http://localhost:8081/item/addItem/1", { id: itemID })
+      axios.post("http://localhost:8084/item/addItem/1", { id: itemID })
       .then(response => {
         console.log(response);
         props.getItems();

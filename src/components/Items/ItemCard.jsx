@@ -53,13 +53,13 @@ function ItemCard(props) {
     for (const item of items)
 
         displayItems.push(
-            <div className='col-auto' key={item.id} >
+            <div className='col-4' key={item.id} >
                 <div className='card'>
                     <div className='card_body'>
 
                         <div className='card_text'>
 
-                            <p className='card_image'><b></b><img width="200px" src={item.image} alt=""></img></p>
+                            <p className='card_image'><b></b><img width="150px" src={item.image} alt=""></img></p>
                             <p className='card_name'> <b>Name:</b> {item.name}</p>
                             <p><b>Quantity:</b> {item.Quantity}</p>
 

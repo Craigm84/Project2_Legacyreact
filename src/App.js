@@ -9,6 +9,8 @@ import ItemsPage from './Routing/ItemsPage';
 import ItemEdit from './components/Items/ItemEdit';
 import Header from './Routing/Header';
 import Login from './components/Login/Login';
+import { Rating } from '@mui/material';
+import ItemCard from './components/Items/ItemCard';
 
 
 
@@ -24,7 +26,7 @@ function App() {
 <Route path="/ItemsPage" element={<ItemsPage />}></Route>
 <Route path="/CartPage" element={<CartPage />}></Route>
 <Route path="/Item/update/:id" element={<ItemEdit />}></Route>
-
+<Route path="/Item/rating/:id" element={<ItemCard />}></Route>
 </Routes>
 
 </div>
