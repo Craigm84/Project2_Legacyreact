@@ -14,15 +14,7 @@ export default function Routing() {
                 ENCOM INTERNATIONAL
             </Link>
 
-            {/* <div className="header_search">
-                <input className="header_searchInput" type="text"></input>
-                <SearchIcon className="header_searchIcon" />
-
-            </div> */}
-
-
-
-            <ul>
+                 <ul>
 
                 <Link to='/Login'>
 
@@ -41,7 +33,7 @@ export default function Routing() {
                     </div>
                 </CustomerLink>
                 <CustomerLink to="/ItemsPage">Items</CustomerLink>
-                {/* <CustomerLink to="/CartPage">Cart</CustomerLink> */}
+              
             </ul>
         </nav>
     )

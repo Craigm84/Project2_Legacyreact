@@ -13,8 +13,6 @@ function ItemEdit(props) {
     const params = useParams();
     const [items, setItems] = useState("")
 
-
-
     useEffect(function getItems() {
 
         axios.get("http://localhost:8084/item/get/" + params.id)
@@ -36,8 +34,6 @@ function ItemEdit(props) {
         navigate(-1);
         }).catch(err => console.error(err))
 }
-
-
 
     return (<form onSubmit={editItem}>
                      <label htmlFor="Name">Name</label>

@@ -1,11 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import ItemManager from "./ItemManager";
-import ItemDelete from "./ItemDelete";
-import ItemEdit from "./ItemEdit";
-import {Link, Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import BasketCreate from "./BasketCreate";
-
 
 function ItemGet(props) {
     const [name, setName] = useState("")
@@ -13,14 +10,13 @@ function ItemGet(props) {
     const [quantity, setQuantity] = useState("")
     const [items, setItems] = useState([]);
 
-
     function getItems() {
 
         axios.get("http://localhost:8084/item/get")
             .then((response) => setItems(response.data))
             .catch((error) => console.log(error))
     }
-    useEffect(getItems,[]);
+    useEffect(getItems, []);
 
     const itemComponents = []
 
@@ -34,8 +30,7 @@ function ItemGet(props) {
                 price={item.price}
                 quantity={item.quantity}
                 image={item.image}
-
-            /> 
+            />
         )
     }
 
@@ -43,13 +38,11 @@ function ItemGet(props) {
         <div>
             <div>
                 <br />
-                <BasketCreate/>
+                <BasketCreate />
                 <br />
-
                 <table className="table table-bordered">
                     <thead className="table-dark">
                         <tr>
-
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
@@ -67,30 +60,19 @@ function ItemGet(props) {
                                     <td>{item.quantity}</td>
                                     <td> <Link className="btn btn-primary" type="submit" to={`/Item/update/${item.id}`}>Update</Link> </td>
                                     <td><button type="button" className="btn btn-danger" onClick={() => {
-                axios.delete("http://localhost:8084/item/delete/" + item.id)
-                    .then(res => { getItems()
+                                        axios.delete("http://localhost:8084/item/delete/" + item.id)
+                                            .then(res => {
+                                                getItems()
+                                            })
+                                            .catch(err => console.error(err));
 
-
-                        // axios.get("http://localhost:8084/item/get/")
-                        //     .then(response => {
-                        //         setItems(response.data)
-                        //         console.log(response);
-                        //     })
-                        //     .catch(err => console.error(err))
-                
-                    })
-                    .catch(err => console.error(err));
-
-            }}>DELETE</button></td>
+                                    }}>DELETE</button></td>
                                 </tr>
                             ))
                         }
 
-<div></div>
-                        {/* <tr>
-                        {itemComponents}
-</tr> */}
-
+                        <div>
+                        </div>
                     </tbody>
                 </table>
             </div>

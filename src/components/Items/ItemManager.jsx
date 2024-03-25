@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 
-
 function ItemManager(props) {
     
     return (   

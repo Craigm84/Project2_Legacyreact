@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-
 function BasketCreate(props) {
 
     const [name, setName] = useState("")
@@ -15,7 +14,6 @@ function BasketCreate(props) {
                  }).catch(err => console.error(err))
     }
 
-
     return (<form onSubmit={createBasket}>
                     <label htmlFor="Name">Name</label>
                     <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
@@ -26,14 +24,11 @@ function BasketCreate(props) {
                         onChange={event => setName(event.target.value)}
                         required
                         placeholder="Enter Basket Name"
-                    />      
-
-
+                    />     
                     <div className="mt-2">
                         <button className="btn btn-secondary" type="submit">Create Basket</button>
                     </div>
             </form>
-
         )
     }
     export default BasketCreate;
