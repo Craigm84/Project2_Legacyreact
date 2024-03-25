@@ -28,7 +28,7 @@ function App() {
         </Routes>
 
         <section class="star-wars">
-
+        <div class="main"></div>
           <div class="crawl">
 
             <div class="title">
