@@ -15,9 +15,9 @@ function Rating(props) {
     const navigate = useNavigate();
     const params = useParams();
     const [quantity, setQuantity] = useState(0);
- 
 
-function Rating(props) {
+
+    function Rating(props) {
 
         axios.get("http://localhost:8084/item/get/" + params.id)
             .then((response) => {
@@ -30,7 +30,7 @@ function Rating(props) {
             .catch((error) => console.log(error));
     }
 
-    useEffect (Rating, []);
+    useEffect(Rating, []);
 }
 
 const itemRating = [];
@@ -71,11 +71,11 @@ for (const rating of ratings)
                         </div>
                     </div>
                 </div>
-                </div>
-                </div>
+            </div>
+        </div>
 
     )
-    
-                return ({itemRating});
 
-                export default Rating;
+return ({ itemRating });
+
+export default Rating;
