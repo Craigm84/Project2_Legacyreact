@@ -3,6 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { useStateValue } from '../StateProvider';
 import './Routing.css';
+import Navbar from '../components/Navbar';
 
 export default function Routing() {
     const [{ basket }, dispatch] = useStateValue();
@@ -13,18 +14,13 @@ export default function Routing() {
                 <img className="site_logo" src="https://pbs.twimg.com/media/ERfup7wWsAArWMk?format=jpg&name=small" />
                 ENCOM INTERNATIONAL
             </Link>
-
-                 <ul>
-
+            <ul>
                 <Link to='/Login'>
 
                     <div className="header_option">
-                        <span className="header_optionLineOne">Hello</span>
                         <span className="header_optionLineTwo">Sign In</span>
                     </div>
                 </Link>
-
-
 
                 <CustomerLink to="/CartPage">
                     <div className="header_optionBasket">
@@ -33,7 +29,7 @@ export default function Routing() {
                     </div>
                 </CustomerLink>
                 <CustomerLink to="/ItemsPage">Items</CustomerLink>
-              
+                <Navbar />
             </ul>
         </nav>
     )
