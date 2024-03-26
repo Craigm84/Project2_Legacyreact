@@ -22,9 +22,7 @@ const register = e => {
 
     return (
         <div className="login">
-            {/* <Link to='/'>
-                <img className="login_logo" src="https://pbs.twimg.com/media/ERfup7wWsAArWMk?format=jpg&name=small"></img>
-            </Link> */}
+     
 
 <div className='login_container'>
 <h1>Sign-in</h1>
