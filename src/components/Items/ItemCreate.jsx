@@ -24,7 +24,7 @@ function ItemCreate(props) {
     return (<form onSubmit={createItem}>
         <label htmlFor="Name">Name</label>
         <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
-            id="Name"
+            id="name"
             firstname="name"
             type="text"
             value={name}
@@ -64,7 +64,7 @@ function ItemCreate(props) {
             placeholder="Enter Image URL"
         />
         <div className="mt-2">
-            <button className="btn btn-secondary" type="submit">Submit</button>
+            <button className="btn btn-secondary" id="submit" type="submit">Submit</button>
         </div>
     </form>
 
