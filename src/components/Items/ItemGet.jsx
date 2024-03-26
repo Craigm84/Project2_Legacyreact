@@ -58,8 +58,8 @@ function ItemGet(props) {
                                     <td>{item.name}</td>
                                     <td>{item.price}</td>
                                     <td>{item.quantity}</td>
-                                    <td> <Link className="btn btn-primary" type="submit" to={`/Item/update/${item.id}`}>Update</Link> </td>
-                                    <td><button type="button" className="btn btn-danger" onClick={() => {
+                                    <td> <Link className="btn btn-primary" id="update" type="submit" to={`/Item/update/${item.id}`}>Update</Link> </td>
+                                    <td><button type="button" className="btn btn-danger" id = "delete" onClick={() => {
                                         axios.delete("http://localhost:8084/item/delete/" + item.id)
                                             .then(res => {
                                                 getItems()

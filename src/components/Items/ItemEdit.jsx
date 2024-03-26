@@ -70,7 +70,7 @@ function ItemEdit(props) {
         />
 
         <div className="mt-2">
-            <button className="btn btn-secondary" type="submit">Submit</button>
+            <button id ="editSubmit" className="btn btn-secondary" type="submit">Submit</button>
         </div>
     </form>
 

@@ -55,7 +55,7 @@ function ItemCard(props) {
                         <div className='card_text'>
 
                             <p className='card_image'><b></b><img width="150px" src={item.image} alt=""></img></p>
-                            <p className='card_name'> <b>Name:</b> {item.name}</p>
+                            <p id="itemName" className='card_name'> <b>Name:</b> {item.name}</p>
                             <p><b id="q">Quantity:</b> {item.Quantity}</p>
                             <div className="card_price_quantity">
                                 <div className="card_price">
