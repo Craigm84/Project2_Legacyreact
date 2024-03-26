@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from "axios";
 import { useStateValue } from "../../StateProvider";
 import { useState, useEffect } from "react";
@@ -22,10 +21,8 @@ function ItemCard(props) {
     const params = useParams();
     const [quantity, setQuantity] = useState(0);
 
-
     const [{ basket }, dispatch] = useStateValue();
     console.log("basket:", basket)
-
 
     function addToBasket() {
 
@@ -40,13 +37,11 @@ function ItemCard(props) {
                 setPrice(response.data.price);
                 setQuantity(response.data.quantity);
                 setImage(response.data.image);
-
                 console.log(response);
             })
             .catch(err => console.error(err))
     }
     useEffect(getCard, []);
-
 
     const displayItems = [];
 
@@ -62,7 +57,6 @@ function ItemCard(props) {
                             <p className='card_image'><b></b><img width="150px" src={item.image} alt=""></img></p>
                             <p className='card_name'> <b>Name:</b> {item.name}</p>
                             <p><b>Quantity:</b> {item.Quantity}</p>
-
                             <div className="card_price_quantity">
                                 <div className="card_price">
                                     <div style={{
@@ -86,11 +80,6 @@ function ItemCard(props) {
                                     <AddToCart id={item.id} />
                                 </div>
                             </div>
-
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -98,12 +87,6 @@ function ItemCard(props) {
             </div>
 
         )
-
-
-
-
-
-
 
     return (
 

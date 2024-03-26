@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import ItemManager from "./ItemManager";
 import { useNavigate, useParams } from "react-router-dom";
 
 function ItemEdit(props) {
@@ -29,55 +28,53 @@ function ItemEdit(props) {
     function editItem() {
 
         axios.patch("http://localhost:8084/item/update/" + params.id,
-        { name, price, quantity, image })
-        .then(() => {
-        navigate(-1);
-        }).catch(err => console.error(err))
-}
+            { name, price, quantity, image })
+            .then(() => {
+                navigate(-1);
+            }).catch(err => console.error(err))
+    }
 
     return (<form onSubmit={editItem}>
-                     <label htmlFor="Name">Name</label>
-                    <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
-                        id="Name"
-                        type="text"
-                        value={name}
-                        onChange={event => setName(event.target.value)}
-                        required
-                    />
-                    <br /><label htmlFor="price">Price</label>
-                    <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
-                        id="price"
-                        type="double"
-                        value={price}
-                        onChange={event => setPrice(event.target.value)}
-                        required
-                    />
+        <label htmlFor="Name">Name</label>
+        <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
+            id="Name"
+            type="text"
+            value={name}
+            onChange={event => setName(event.target.value)}
+            required
+        />
+        <br /><label htmlFor="price">Price</label>
+        <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
+            id="price"
+            type="double"
+            value={price}
+            onChange={event => setPrice(event.target.value)}
+            required
+        />
+        <br /><label htmlFor="quantity">Quantity</label>
+        <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
+            id="quantity"
+            type="number"
+            value={quantity}
+            onChange={event => setQuantity(event.target.value)}
+            required
+        />
+        <br /><label htmlFor="image">Image</label>
+        <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
+            size=""
+            id="image"
+            type="src"
+            value={image}
+            onChange={event => setImage(event.target.value)}
+            required
+        />
 
-                    <br /><label htmlFor="quantity">Quantity</label>
-                    <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
-                        id="quantity"
-                        type="number"
-                        value={quantity}
-                        onChange={event => setQuantity(event.target.value)}
-                        required
-                    />
-                    
-                    <br /><label htmlFor="image">Image</label>
-                    <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
-                        size=""
-                        id="image"
-                        type="src"
-                        value={image}
-                        onChange={event => setImage(event.target.value)}
-                        required
-                    />     
-                    
-                    <div className="mt-2">
-                        <button className="btn btn-secondary" type="submit">Submit</button>
-                    </div>
-            </form>
+        <div className="mt-2">
+            <button className="btn btn-secondary" type="submit">Submit</button>
+        </div>
+    </form>
 
-     )
+    )
 }
 
 export default ItemEdit;

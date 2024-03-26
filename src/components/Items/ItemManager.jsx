@@ -8,7 +8,6 @@ function ItemManager(props) {
             <td>{props.price}</td>
             <td>{props.quantity}</td>
             <td>{props.image}</td>
-
         </tr>
     );
     }

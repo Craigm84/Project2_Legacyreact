@@ -28,7 +28,7 @@ function Navbar() {
         <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
             <GlobalStyles />
             <StyledApp>
-                <div>                    
+                <div>
                     <div className="" id="navbarSupportedContent">
                         <br />
                         <button style={{ fontSize: "40px", fontWeight: "" }} className="btn btn-secondary" onClick={() => themeToggler()}>🌓</button>

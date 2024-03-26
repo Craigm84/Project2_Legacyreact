@@ -1,12 +1,12 @@
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-    margin:0;
+    margin: 0;
 }
 
-.container{
+.container {
     margin: 1rem;
     text-align: centre;
 }
@@ -49,8 +49,6 @@ body {
     padding: .25rem;
 }
 
-
-
 .header_option {
     display: flex;
     flex-direction: column;
@@ -62,7 +60,7 @@ body {
 .header_optionBasket {
     display: flex;
     align-items: center;
-    color:white;
+    color: white;
 }
 
 .header_basketCount {

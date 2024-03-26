@@ -65,12 +65,10 @@ function ItemGet(props) {
                                                 getItems()
                                             })
                                             .catch(err => console.error(err));
-
                                     }}>DELETE</button></td>
                                 </tr>
                             ))
                         }
-
                         <div>
                         </div>
                     </tbody>

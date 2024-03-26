@@ -1,9 +1,7 @@
-import React from 'react'
 import axios from "axios";
 import { useStateValue } from "../../StateProvider";
 import { useState, useEffect } from "react";
 import ItemCard from './ItemCard';
-
 
 function Rating(props) {
     const [id, setId] = useState("")
@@ -42,13 +40,10 @@ for (const rating of ratings)
         <div className='col-auto' key={item.id} >
             <div className='card'>
                 <div className='card_body'>
-
                     <div className='card_text'>
-
                         <p className='card_image'><b></b><img width="200px" src={item.image} alt=""></img></p>
                         <p className='card_name'> <b>Name:</b> {item.name}</p>
                         <p><b>Quantity:</b> {item.Quantity}</p>
-
                         <div className="card_price_quantity">
                             <div className="card_price">
                                 <div style={{ alignContent: "center" }} className="buttons">

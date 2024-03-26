@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -39,15 +38,11 @@ function AddToCart(props) {
       }).catch(err => console.error(err));
   }
    
-  return (
-
-    
+  return (    
 
       <div className="mt-2">
         <button class="btn btn-success" onClick={addToBasket}>Add to Basket</button>
-
-      </div>
-   
+      </div>   
   )
 }
 

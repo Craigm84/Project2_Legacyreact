@@ -1,8 +1,6 @@
-import React from "react"
 import "./Product.css";
 import { useStateValue } from "../StateProvider";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
 
 function Product({ id, name, price, image, quantity }) {
     const [{ basket }, dispatch] = useStateValue();
@@ -29,23 +27,21 @@ function Product({ id, name, price, image, quantity }) {
                 <p className="product_info_name">{name}</p>
                 <div className="product_price_quantity">
                     <div className="product_price">
-
                         <div className="buttons">
-
                             <i class="bi bi-dash-lg"></i>
                             <div className="product_quantity">1</div>
                             <i class="bi bi-plus-lg"></i>
-                        <small>£</small>
-                        <strong>{price}</strong>
+                            <small>£</small>
+                            <strong>{price}</strong>
                         </div>
 
                     </div>
                 </div>
             </div>
             <button class="btn btn-success" onClick={addToBasket}>Add to basket</button>
-        </div>                
+        </div>
 
-            )
+    )
 }
 
-            export default Product
+export default Product
