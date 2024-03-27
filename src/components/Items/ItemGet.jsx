@@ -38,8 +38,7 @@ function ItemGet(props) {
         <div>
             <div>
                 <br />
-                <BasketCreate />
-                <br />
+                   <br />
                 <table className="table table-bordered">
                     <thead className="table-dark">
                         <tr>

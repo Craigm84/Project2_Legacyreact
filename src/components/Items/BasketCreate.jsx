@@ -15,10 +15,9 @@ function BasketCreate(props) {
     }
 
     return (<form onSubmit={createBasket}>
-                    <label htmlFor="Name">Name</label>
+                    <label htmlFor="Name">Create Basket</label>
                     <br /><input className="form-control border-2 border-secondary rounded" style={{ width: "250px", height: "31px" }}
                         id="Name"
-                        firstname="name"
                         type="text"
                         value={name}
                         onChange={event => setName(event.target.value)}
@@ -26,7 +25,7 @@ function BasketCreate(props) {
                         placeholder="Enter Basket Name"
                     />     
                     <div className="mt-2">
-                        <button className="btn btn-secondary" type="submit">Create Basket</button>
+                        <button id="submit" className="btn btn-secondary" type="submit">Submit</button>
                     </div>
             </form>
         )

@@ -10,6 +10,7 @@ import { Rating } from '@mui/material';
 import ItemCard from './components/Items/ItemCard';
 import Home from './components/Home';
 import CartCard from './components/Cart/BasketCard';
+import BasketCreate from './components/Items/BasketCreate';
 
 
 function App() {
@@ -25,8 +26,7 @@ function App() {
           <Route path="/CartPage" element={<CartPage />}></Route>
           <Route path="/Item/update/:id" element={<ItemEdit />}></Route>
           <Route path="/Item/rating/:id" element={<ItemCard />}></Route>
-          <Route path="/Cart/get" element={<CartCard />}></Route>
-
+          <Route path="/Cart/get" element={<><BasketCreate/><CartCard /></>}></Route>
         </Routes>
      
       </div>

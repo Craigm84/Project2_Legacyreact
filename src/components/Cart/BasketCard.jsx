@@ -27,7 +27,7 @@ function CartCard(props) {
                 <div className='card'>
                     <div className='card_body'>
                         <div className='card_text'>
-                            <p id="itemName" className='card_name'> <b>Name:</b> {cart.name}</p>
+                            <p id="cartName" className='card_name'> <b>Name:</b> {cart.name}</p>
                         </div>
                     </div>
                 </div>

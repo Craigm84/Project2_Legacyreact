@@ -21,6 +21,12 @@ export default function Routing() {
                         <span className="header_optionLineTwo">Sign In</span>
                     </div>
                 </Link>
+                <Link to='/Cart/get'>
+
+                    <div className="header_option">
+                        <span className="header_optionLineTwo">Baskets</span>
+                    </div>
+                </Link>
 
                 <CustomerLink to="/CartPage">
                     <div className="header_optionBasket">
