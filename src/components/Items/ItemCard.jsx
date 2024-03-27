@@ -24,11 +24,7 @@ function ItemCard(props) {
     const [{ basket }, dispatch] = useStateValue();
     console.log("basket:", basket)
 
-    function addToBasket() {
-
-    }
-
-    function getCard() {
+     function getCard() {
 
         axios.get("http://localhost:8084/item/get")
             .then(response => {
