@@ -3,6 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { useStateValue } from '../StateProvider';
 import './Routing.css';
+import Navbar from '../components/Navbar';
 
 export default function Routing() {
     const [{ basket }, dispatch] = useStateValue();
@@ -10,38 +11,30 @@ export default function Routing() {
     return (
         <nav className="nav">
             <Link to="/" className="site-title">
-                <img className="site_logo" src="https://pbs.twimg.com/media/ERfup7wWsAArWMk?format=jpg&name=small" />
-                ENCOM INTERNATIONAL
+                <img className="site_logo" src="/Kessel.png" style={{width:"30%"}}/>
             </Link>
-
-            {/* <div className="header_search">
-                <input className="header_searchInput" type="text"></input>
-                <SearchIcon className="header_searchIcon" />
-
-            </div> */}
-
-
-
             <ul>
-
                 <Link to='/Login'>
 
                     <div className="header_option">
-                        <span className="header_optionLineOne">Hello</span>
                         <span className="header_optionLineTwo">Sign In</span>
                     </div>
                 </Link>
+                <Link to='/Cart/get'>
 
-
+                    <div className="header_option">
+                        <span className="header_optionLineTwo">Baskets</span>
+                    </div>
+                </Link>
 
                 <CustomerLink to="/CartPage">
-                    <div className="header_optionBasket">
+                    <div  className="header_optionBasket">
                         <ShoppingBasketIcon />
                         <span className="header_optionLineTwo header_basketCount">{basket?.length}</span>
                     </div>
                 </CustomerLink>
                 <CustomerLink to="/ItemsPage">Items</CustomerLink>
-                {/* <CustomerLink to="/CartPage">Cart</CustomerLink> */}
+                <Navbar />
             </ul>
         </nav>
     )

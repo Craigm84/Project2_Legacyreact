@@ -1,4 +1,3 @@
-import React from 'react'
 import axios from "axios";
 import { useStateValue } from "../../StateProvider";
 import { useState, useEffect } from "react";
@@ -22,16 +21,10 @@ function ItemCard(props) {
     const params = useParams();
     const [quantity, setQuantity] = useState(0);
 
-
     const [{ basket }, dispatch] = useStateValue();
     console.log("basket:", basket)
 
-
-    function addToBasket() {
-
-    }
-
-    function getCard() {
+     function getCard() {
 
         axios.get("http://localhost:8084/item/get")
             .then(response => {
@@ -40,29 +33,26 @@ function ItemCard(props) {
                 setPrice(response.data.price);
                 setQuantity(response.data.quantity);
                 setImage(response.data.image);
-
                 console.log(response);
             })
             .catch(err => console.error(err))
     }
     useEffect(getCard, []);
 
-
     const displayItems = [];
 
     for (const item of items)
 
         displayItems.push(
-            <div className='col-auto' key={item.id} >
+            <div className='col-4' key={item.id} >
                 <div className='card'>
                     <div className='card_body'>
 
                         <div className='card_text'>
 
-                            <p className='card_image'><b></b><img width="200px" src={item.image} alt=""></img></p>
-                            <p className='card_name'> <b>Name:</b> {item.name}</p>
-                            <p><b>Quantity:</b> {item.Quantity}</p>
-
+                            <p className='card_image'><b></b><img width="150px" src={item.image} alt=""></img></p>
+                            <p id="itemName" className='card_name'> <b>Name:</b> {item.name}</p>
+                            <p><b id="q">Quantity:</b> {item.Quantity}</p>
                             <div className="card_price_quantity">
                                 <div className="card_price">
                                     <div style={{
@@ -86,11 +76,6 @@ function ItemCard(props) {
                                     <AddToCart id={item.id} />
                                 </div>
                             </div>
-
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -98,12 +83,6 @@ function ItemCard(props) {
             </div>
 
         )
-
-
-
-
-
-
 
     return (
 

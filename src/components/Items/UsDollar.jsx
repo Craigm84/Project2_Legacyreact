@@ -1,8 +1,5 @@
-import React from 'react';
-
 function USD({item}) {
     const usd = item.price * 1.3;
-
 
     return (
         <div>

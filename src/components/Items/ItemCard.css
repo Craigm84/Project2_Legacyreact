@@ -2,8 +2,7 @@
     height: 10rem;
 }
 
-
-.card_imgage > img {
+.card_imgage>img {
     max-height: 200px;
     width: 200px;
     justify-content: center;
@@ -40,10 +39,9 @@
 }
 
 .bi-dash-lg {
-color: red;
+    color: red;
 }
 
 .bi-plus-lg {
     color: green;
 }
-

@@ -2,7 +2,6 @@ import React from 'react';
 import './CartItem.css';
 import { useStateValue } from "../../StateProvider";
 
-
 function CartItem({ id, image, name, price, quantity }) {
   const [{basket}, dispatch] = useStateValue();
  
@@ -14,10 +13,8 @@ function CartItem({ id, image, name, price, quantity }) {
  }
 
  const updateBasket = () => {
-
  }
- 
- 
+  
   return (
     <div className='cartItem'>
       <img className='cartItem_image' src={image}></img>
