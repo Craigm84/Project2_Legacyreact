@@ -11,8 +11,7 @@ export default function Routing() {
     return (
         <nav className="nav">
             <Link to="/" className="site-title">
-                <img className="site_logo" src="https://pbs.twimg.com/media/ERfup7wWsAArWMk?format=jpg&name=small" />
-                ENCOM INTERNATIONAL
+                <img className="site_logo" src="/Kessel.png" style={{width:"30%"}}/>
             </Link>
             <ul>
                 <Link to='/Login'>
