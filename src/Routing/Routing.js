@@ -29,7 +29,7 @@ export default function Routing() {
                 </Link>
 
                 <CustomerLink to="/CartPage">
-                    <div className="header_optionBasket">
+                    <div  className="header_optionBasket">
                         <ShoppingBasketIcon />
                         <span className="header_optionLineTwo header_basketCount">{basket?.length}</span>
                     </div>
